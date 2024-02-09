@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Fun</title>
+        <style>
+            /* Additional styles for fun */
+            .red { background: tomato; }
+            .blue { background: dodgerblue; }
+            .green { background: mediumseagreen; }
+            .orange { background: orange; }
+            .purple { background: rebeccapurple; }
+            .flex-item { width:100px; height:100px; color: #ffffff; 
+                font-size:2em; display: flex; justify-content: center; margin: 10px;}
+            .flex-container {display: flex; justify-content: space-around; 
+                flex-direction: row; flex-wrap: wrap; background-color: lightgray; 
+                padding: 20px;}
+            nav {display: flex; background-color: #333; justify-content: space-between;
+                align-items: center; color: white; flex-wrap: wrap;}
+            nav .logo {font-size: 24px; margin-left: 20px;}
+            nav ul {
+                display: flex; flex-wrap: wrap; justify-content: space-around; list-style: none; margin-right: 20px;
+            }
+            nav ul li {margin-left: 5px;}
+            nav ul a {
+                color: white;
+                text-decoration: none;
+            }
+            
+            @media (min-width: 600px) {
+                .flex-item {color: lightgray;}
+            }
+            @media (min-width: 900px) {
+                .flex-item {justify-content: space-around; color: purple;}
+            }
+            @media (max-width: 600px) {
+                nav ul li {width: 100%; margin: 5px;}
+                nav {align-items: center;}
+                nav div {justify-content: center;}
+                nav .logo {padding-left: 20%}
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <h1>FlexBox practice</h1>
+        <nav>
+            <div class="logo">
+                <strong>Logo</strong>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="flex-container">
+            <div class="flex-item red">
+                <p>1</p>
+            </div>
+            <div class="flex-item blue">
+                <p>1</p>
+            </div>
+            <div class="flex-item green">
+                <p>1</p>
+            </div>
+            <div class="flex-item orange">
+                <p>1</p>
+            </div>
+            <div class="flex-item purple">
+                <p>1</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Do we need this?</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+<!-- use embeded styles to make the width & height to be 100px
+and the text inside should be white and font size 2em
+-->
